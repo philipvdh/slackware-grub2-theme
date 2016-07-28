@@ -1,0 +1,77 @@
+# slack grub2 theme
+# based on Arch Linux arch-suse grub2 theme
+
+# If one chooses desktop-color instead of a completely black background.png
+# boot_menu_nw.png does not display...
+#desktop-color:  "#000"
+desktop-image: "background.png"
+
+
+title-text: ""
+
+message-bg-color: "#000"
+
+terminal-box: "terminal_*.png"
+terminal-font: "Gnu Unifont Mono Regular 16"
+
+# Show Slackware logo
+
++ image {
+		    id = "__slacklogo__"
+		    left = 27%
+		    width = 9%
+		    top = 8%
+		    height = 7%
+		    file = "slacklogo.png"
+}
+
++ boot_menu {
+  left = 15%
+  width = 70%
+  top = 36%
+  height = 45%	
+
+  menu_pixmap_style = "boot_menu_*.png"
+
+  item_font = "DejaVu Sans Bold 14"
+  item_color = "#fff"
+  item_height = 34
+  item_icon_space = 8
+  item_spacing = 4
+
+  selected_item_font = "DejaVu Sans Bold 14"
+  selected_item_color= "#fff"
+  selected_item_pixmap_style = "select_*.png"
+
+  icon_height = 33
+  icon_width = 33
+
+  scrollbar = true
+  scrollbar_width = 20
+  scrollbar_thumb = "slider_*.png"
+}
+
++ progress_bar {
+  id = "__timeout__"
+
+  left = 50%-300
+  top = 85%
+  height = 34
+  width = 600
+
+  font = "DejaVu Sans Bold 14"
+
+  text_color = "#fff"
+  fg_color = "#122359"
+
+  #bg_color = "#54608C"
+  bg_color = "#000"
+  border_color = "#fff"
+
+  # instead of the above colors, use pixmaps
+  # bar_style = "progress_bar_*.png"
+  # highlight_style = "progress_highlight_*.png"
+
+  text = "@TIMEOUT_NOTIFICATION_LONG@"
+}
+
